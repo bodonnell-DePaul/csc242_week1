@@ -1,7 +1,7 @@
 # CSC 242-701 — Introduction to Computer Science II  
 **Fall 2025**  
 **Lectures:** Tuesday, 5:45–9:00 PM, CDM00315 
-**Labs:** Thursday, 5:00–6:30 PM, CDM00315  
+**Labs:** Wednesday, 5:00–6:30 PM, CDM00315  
 **Instructor:** Brian O'Donnell  
 **Lab Instructor:** Riteeka Purnekar  
 
