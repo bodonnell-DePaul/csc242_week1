@@ -78,8 +78,8 @@ After completing this course, you will:
 | 2    | Object-oriented programming                              | 8        |
 | 3    | OOP + GUI intro & event-driven programming               | 8, 9     |
 | 4    | GUI development                                          | 9        |
-| 5    | Recursion + Midterm                                      | 10       |
-| 6    | Midterm review, recursion, sorting, searching            | 10       |
+| 5    | Recursion + Midterm review                               | 10       |
+| 6    | Midterm, recursion, sorting, searching                   | 10       |
 | 7    | More recursion                                           | 10       |
 | 8    | HTML & WWW application development                       | 11       |
 | 9    | WWW application development                              | 11       |
