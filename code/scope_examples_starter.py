@@ -19,8 +19,9 @@ Author: Brian O'Donnell
 # ============================================================================
 
 # TODO: Create a global variable called 'global_counter' and set it to 0
+global_counter = 0
 # TODO: Create a global variable called 'global_message' and set it to "Hello from global scope"
-
+global_message = "Hello from global scope"
 
 def demonstrate_global_scope():
     """Demonstrate global variable access."""
@@ -29,24 +30,40 @@ def demonstrate_global_scope():
     def read_global():
         """Function that reads global variables."""
         # TODO: Print both global_counter and global_message
+        print('Global Counter: {}'.format(global_counter))
+        print('Global Message: {}'.format(global_message))
         # TODO: Print their ids using id() function
+        print('Global Counter ID: {}'.format(id(global_counter)))
+        print('Global Message ID: {}'.format(id(global_message)))
         pass
     
     def modify_global_wrong():
         """Attempt to modify global variable (this will create local variable)."""
         # TODO: Try to increment global_counter by 1
+        global_counter = -5
+        global_counter += 1
         # TODO: Print the value and id of global_counter
+        print('Global Counter Take Two: {}'.format(global_counter))
+        print('Global Counter ID: {}'.format(id(global_counter)))
         pass
     
     def modify_global_correct():
         """Correctly modify global variable using global keyword."""
         # TODO: Use 'global' keyword to declare global_counter as global
+        global global_counter
         # TODO: Increment global_counter by 1
+        global_counter += 1
         # TODO: Print the value and id of global_counter
+        print('Global Global Counter: {}'.format(global_counter))
+        print('Global Global Counter ID: {}'.format(id(global_counter)))
         pass
     
     print(f"Initial global_counter: {global_counter}")
     
+    
+    modify_global_wrong()
+    modify_global_correct()
+    read_global()
     # TODO: Call read_global()
     # TODO: Call modify_global_wrong()
     # TODO: Print global_counter after wrong modification - did it change?
@@ -65,25 +82,34 @@ def demonstrate_local_scope():
     def outer_function():
         """Function with local variables."""
         # TODO: Create a local variable 'local_var' with value "I'm local"
+        local_var = "I'm local"
         # TODO: Create a local variable 'number' with value 42
+        number = 42
         
         def inner_function():
             """Nested function accessing outer function's variables."""
             # TODO: Print local_var and number from outer function
+            print('Our outer function variable: {} {}'.format(local_var, number))
             # TODO: Try to create a new local variable 'inner_var' with value "I'm inner"
+            inner_var = "I'm inner"
+            print('The Inner Variable: {}'.format(inner_var))
             # TODO: Print inner_var
             pass
         
         def inner_modify():
             """Try to modify outer function's variable."""
             # TODO: Try to modify 'number' by adding 10 to it
+            number = number + 10
             # TODO: Print the modified number
+            print('Modified Number: {}'.format(number))
             # TODO: What will happen? Will this work?
             pass
         
         def inner_modify_correct():
             """Correctly modify outer function's variable using nonlocal."""
             # TODO: Use 'nonlocal' keyword to declare 'number' as nonlocal
+            nonlocal number
+            number += 10
             # TODO: Add 10 to number
             # TODO: Print the modified number
             pass
@@ -332,7 +358,7 @@ if __name__ == "__main__":
     
     # Uncomment these as you complete each section:
     
-    # demonstrate_global_scope()
+    demonstrate_global_scope()
     # demonstrate_local_scope()
     # demonstrate_class_scope()
     # demonstrate_legb_rule()
